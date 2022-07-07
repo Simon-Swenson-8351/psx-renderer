@@ -5,6 +5,9 @@ fn main() {
     let teapot_path = std::path::Path::new("res/mdl/teapot/teapot.obj");
     let teapot_mdl = obj::Obj::load(teapot_path).unwrap();
 
+    let knight_path = std::path::Path::new("res/mdl/psx-knight/psx-knight.gltf");
+    let knight_gltf = gltf::import(knight_path);
+
     // camera stuff
 
 

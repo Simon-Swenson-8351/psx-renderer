@@ -1,1 +1,1 @@
-use fixed::types::FixedI32<U16> as FractionalType;
+pub use fixed::types::I16F16 as FractionalType;
