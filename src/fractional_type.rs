@@ -21,6 +21,21 @@ impl FractionalType
     {
         self.0.to_num()
     }
+
+    pub fn round(&self) -> Self
+    {
+        Self(self.0.round())
+    }
+
+    pub fn floor(&self) -> Self
+    {
+        Self(self.0.floor())
+    }
+
+    pub fn ceil(&self) -> Self
+    {
+        Self(self.0.ceil())
+    }
 }
 
 impl std::ops::Add for FractionalType
@@ -65,6 +80,7 @@ impl std::ops::Div for FractionalType
 
 impl num_traits::identities::Zero for FractionalType
 {
+
     fn zero() -> Self
     {
         Self(InternalType::from_num(0))
